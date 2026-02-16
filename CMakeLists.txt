@@ -7,6 +7,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(slr_parser
     src/main.cpp
+    src/lexer.cpp
 )
 
 target_include_directories(slr_parser PRIVATE include)

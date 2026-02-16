@@ -6,7 +6,7 @@ enum class token_type {
     PLUS, MINUS, MUL, DIV,
     LPAREN, RPAREN,
     END,
-    INVALI
+    INVALID
 };
 
 struct Token {
