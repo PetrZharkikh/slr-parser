@@ -3,11 +3,11 @@
 
 static Token make(token_type t, std::string s) { return Token{t, std::move(s)}; }
 
-std::vector<Token> lex_all(const std::string& input){
+std::vector<Token> lex_all(const std::string& input) {
     std::vector<Token> out;
     size_t i = 0;
     auto peek = [&]() -> char {return i < input.size() ? input[i] : '\0'; };
-    while (i < input.size()){
+    while (i < input.size()) {
         char c = peek();
 
         if (std::isspace(static_cast<unsigned char>(c))) { ++i; continue; }
@@ -28,7 +28,7 @@ std::vector<Token> lex_all(const std::string& input){
             continue;
         }
 
-        switch(c){
+        switch(c) {
             case '+': out.push_back(make(token_type::PLUS, "+")); ++i; break;
             case '-': out.push_back(make(token_type::MINUS, "-")); ++i; break;
             case '*': out.push_back(make(token_type::MUL, "*")); ++i; break;
