@@ -14,6 +14,10 @@ struct Item {
         if (prod != other.prod) return prod < other.prod;
         return point < other.point;
     }
+
+    bool operator==(const Item& other) const {
+        return prod == other.prod && point == other.point;
+    }
 };
 
 using ItemSet = std::set<Item>;

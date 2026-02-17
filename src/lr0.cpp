@@ -50,3 +50,49 @@ ItemSet go_to(const Grammar& g, const ItemSet& I, const std::string& X) {
 
     return closure(g, moved);
 }
+
+static int find_state(const std::vector<ItemSet>& states, const ItemSet& s) {
+    for (int i = 0; i < (int)states.size(); ++i) {
+        if (states [i] == s)
+            return i;
+    }
+    return -1;
+}
+
+LR0DFA build_lr0_dfa(const Grammar& g) {
+    LR0DFA dfa;
+
+    ItemSet start;
+    start.insert(Item{0, 0});
+    dfa.states.push_back(closure(g, start));
+
+    std::queue<int> q;
+    q.push(0);
+
+    std::vector<std::string> symbols;
+    symbols.insert(symbols.end(), g.terminals.begin(), g.terminals.end());
+    symbols.insert(symbols.end(), g.nonterminals.begin(), g.nonterminals.end());
+
+    while (!q.empty()) {
+        int i = q.front();
+        q.pop();
+
+        for (const auto& X : symbols) {
+            if (X == "$") continue;
+
+            ItemSet J = go_to(g, dfa.states[i], X);
+            if (J.empty()) continue;
+
+            int j = find_state(dfa.states, J);
+            if (j == -1) {
+                j = (int)dfa.states.size();
+                dfa.states.push_back(J);
+                q.push(j);
+            }
+
+            dfa.trans[{i, X}] = j;
+        }
+    }
+
+    return dfa;
+}
