@@ -10,7 +10,7 @@ ItemSet closure(const Grammar& g, const ItemSet& I) {
         for (const auto& item : result) {
             const auto& prod = g.prods[item.prod];
 
-            if (item.prod >= (int)prod.rhs.size())
+            if (item.point >= (int)prod.rhs.size())
                 continue;
             
             const std::string& sym = prod.rhs[item.point];
