@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/slr_parser.dir/src/grammar.cpp.o"
+  "CMakeFiles/slr_parser.dir/src/grammar.cpp.o.d"
   "CMakeFiles/slr_parser.dir/src/lexer.cpp.o"
   "CMakeFiles/slr_parser.dir/src/lexer.cpp.o.d"
+  "CMakeFiles/slr_parser.dir/src/lr0.cpp.o"
+  "CMakeFiles/slr_parser.dir/src/lr0.cpp.o.d"
   "CMakeFiles/slr_parser.dir/src/main.cpp.o"
   "CMakeFiles/slr_parser.dir/src/main.cpp.o.d"
   "slr_parser"

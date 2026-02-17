@@ -9,6 +9,7 @@ add_executable(slr_parser
     src/main.cpp
     src/lexer.cpp
     src/grammar.cpp
+    src/lr0.cpp
 )
 
 target_include_directories(slr_parser PRIVATE include)

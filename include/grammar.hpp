@@ -5,7 +5,7 @@
 
 struct Production{
     std::string lhs;
-    std::vector<std::string> lhs;
+    std::vector<std::string> rhs;
 };
 
 struct Grammar{

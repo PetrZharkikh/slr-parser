@@ -129,6 +129,30 @@ slr_parser/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/build
 .PHONY : slr_parser/fast
 
+src/grammar.o: src/grammar.cpp.o
+.PHONY : src/grammar.o
+
+# target to build an object file
+src/grammar.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/grammar.cpp.o
+.PHONY : src/grammar.cpp.o
+
+src/grammar.i: src/grammar.cpp.i
+.PHONY : src/grammar.i
+
+# target to preprocess a source file
+src/grammar.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/grammar.cpp.i
+.PHONY : src/grammar.cpp.i
+
+src/grammar.s: src/grammar.cpp.s
+.PHONY : src/grammar.s
+
+# target to generate assembly for a file
+src/grammar.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/grammar.cpp.s
+.PHONY : src/grammar.cpp.s
+
 src/lexer.o: src/lexer.cpp.o
 .PHONY : src/lexer.o
 
@@ -152,6 +176,30 @@ src/lexer.s: src/lexer.cpp.s
 src/lexer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/lexer.cpp.s
 .PHONY : src/lexer.cpp.s
+
+src/lr0.o: src/lr0.cpp.o
+.PHONY : src/lr0.o
+
+# target to build an object file
+src/lr0.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/lr0.cpp.o
+.PHONY : src/lr0.cpp.o
+
+src/lr0.i: src/lr0.cpp.i
+.PHONY : src/lr0.i
+
+# target to preprocess a source file
+src/lr0.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/lr0.cpp.i
+.PHONY : src/lr0.cpp.i
+
+src/lr0.s: src/lr0.cpp.s
+.PHONY : src/lr0.s
+
+# target to generate assembly for a file
+src/lr0.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/lr0.cpp.s
+.PHONY : src/lr0.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -186,9 +234,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... slr_parser"
+	@echo "... src/grammar.o"
+	@echo "... src/grammar.i"
+	@echo "... src/grammar.s"
 	@echo "... src/lexer.o"
 	@echo "... src/lexer.i"
 	@echo "... src/lexer.s"
+	@echo "... src/lr0.o"
+	@echo "... src/lr0.i"
+	@echo "... src/lr0.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
