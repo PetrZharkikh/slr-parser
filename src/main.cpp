@@ -2,6 +2,13 @@
 #include "grammar.hpp"
 #include "lr0.hpp"
 
+//follow
+std::unordered_map<std::string, std::unordered_set<std::string>> follow = {
+    {"E", {")", "$"}},
+    {"T", {"+", "-", ")", "$"}},
+    {"F", {"*", "/", "+", "-", ")", "$"}}
+};
+
 static void print_itemset(const Grammar& g, const ItemSet& I) {
     for (const auto& it : I) {
         const auto& p = g.prods[it.prod];
