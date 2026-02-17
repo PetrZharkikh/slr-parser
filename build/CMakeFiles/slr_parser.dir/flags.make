@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/petrzarkih/Desktop/slr_parser/include
+CXX_INCLUDES = -I/Users/petrzarkih/Desktop/slr_parser/include -I/Users/petrzarkih/Desktop/slr_parser/build
 
 CXX_FLAGSarm64 = -std=c++20 -arch arm64
 

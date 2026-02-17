@@ -69,13 +69,18 @@ include CMakeFiles/slr_parser.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/slr_parser.dir/flags.make
 
+lex_flex.cpp: /Users/petrzarkih/Desktop/slr_parser/src/lexer.l
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/petrzarkih/Desktop/slr_parser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[FLEX][Lexer] Building scanner with flex 2.6.4"
+	cd /Users/petrzarkih/Desktop/slr_parser && /opt/homebrew/bin/cmake -E make_directory /Users/petrzarkih/Desktop/slr_parser/build
+	cd /Users/petrzarkih/Desktop/slr_parser && /usr/bin/flex --c++ -o/Users/petrzarkih/Desktop/slr_parser/build/lex_flex.cpp /Users/petrzarkih/Desktop/slr_parser/src/lexer.l
+
 CMakeFiles/slr_parser.dir/codegen:
 .PHONY : CMakeFiles/slr_parser.dir/codegen
 
 CMakeFiles/slr_parser.dir/src/main.cpp.o: CMakeFiles/slr_parser.dir/flags.make
 CMakeFiles/slr_parser.dir/src/main.cpp.o: /Users/petrzarkih/Desktop/slr_parser/src/main.cpp
 CMakeFiles/slr_parser.dir/src/main.cpp.o: CMakeFiles/slr_parser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/petrzarkih/Desktop/slr_parser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/slr_parser.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/petrzarkih/Desktop/slr_parser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/slr_parser.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slr_parser.dir/src/main.cpp.o -MF CMakeFiles/slr_parser.dir/src/main.cpp.o.d -o CMakeFiles/slr_parser.dir/src/main.cpp.o -c /Users/petrzarkih/Desktop/slr_parser/src/main.cpp
 
 CMakeFiles/slr_parser.dir/src/main.cpp.i: cmake_force
@@ -85,20 +90,6 @@ CMakeFiles/slr_parser.dir/src/main.cpp.i: cmake_force
 CMakeFiles/slr_parser.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/slr_parser.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/petrzarkih/Desktop/slr_parser/src/main.cpp -o CMakeFiles/slr_parser.dir/src/main.cpp.s
-
-CMakeFiles/slr_parser.dir/src/lexer.cpp.o: CMakeFiles/slr_parser.dir/flags.make
-CMakeFiles/slr_parser.dir/src/lexer.cpp.o: /Users/petrzarkih/Desktop/slr_parser/src/lexer.cpp
-CMakeFiles/slr_parser.dir/src/lexer.cpp.o: CMakeFiles/slr_parser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/petrzarkih/Desktop/slr_parser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/slr_parser.dir/src/lexer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slr_parser.dir/src/lexer.cpp.o -MF CMakeFiles/slr_parser.dir/src/lexer.cpp.o.d -o CMakeFiles/slr_parser.dir/src/lexer.cpp.o -c /Users/petrzarkih/Desktop/slr_parser/src/lexer.cpp
-
-CMakeFiles/slr_parser.dir/src/lexer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/slr_parser.dir/src/lexer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/petrzarkih/Desktop/slr_parser/src/lexer.cpp > CMakeFiles/slr_parser.dir/src/lexer.cpp.i
-
-CMakeFiles/slr_parser.dir/src/lexer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/slr_parser.dir/src/lexer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/petrzarkih/Desktop/slr_parser/src/lexer.cpp -o CMakeFiles/slr_parser.dir/src/lexer.cpp.s
 
 CMakeFiles/slr_parser.dir/src/grammar.cpp.o: CMakeFiles/slr_parser.dir/flags.make
 CMakeFiles/slr_parser.dir/src/grammar.cpp.o: /Users/petrzarkih/Desktop/slr_parser/src/grammar.cpp
@@ -156,27 +147,41 @@ CMakeFiles/slr_parser.dir/src/parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/slr_parser.dir/src/parser.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/petrzarkih/Desktop/slr_parser/src/parser.cpp -o CMakeFiles/slr_parser.dir/src/parser.cpp.s
 
+CMakeFiles/slr_parser.dir/lex_flex.cpp.o: CMakeFiles/slr_parser.dir/flags.make
+CMakeFiles/slr_parser.dir/lex_flex.cpp.o: lex_flex.cpp
+CMakeFiles/slr_parser.dir/lex_flex.cpp.o: CMakeFiles/slr_parser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/petrzarkih/Desktop/slr_parser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/slr_parser.dir/lex_flex.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slr_parser.dir/lex_flex.cpp.o -MF CMakeFiles/slr_parser.dir/lex_flex.cpp.o.d -o CMakeFiles/slr_parser.dir/lex_flex.cpp.o -c /Users/petrzarkih/Desktop/slr_parser/build/lex_flex.cpp
+
+CMakeFiles/slr_parser.dir/lex_flex.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/slr_parser.dir/lex_flex.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/petrzarkih/Desktop/slr_parser/build/lex_flex.cpp > CMakeFiles/slr_parser.dir/lex_flex.cpp.i
+
+CMakeFiles/slr_parser.dir/lex_flex.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/slr_parser.dir/lex_flex.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/petrzarkih/Desktop/slr_parser/build/lex_flex.cpp -o CMakeFiles/slr_parser.dir/lex_flex.cpp.s
+
 # Object files for target slr_parser
 slr_parser_OBJECTS = \
 "CMakeFiles/slr_parser.dir/src/main.cpp.o" \
-"CMakeFiles/slr_parser.dir/src/lexer.cpp.o" \
 "CMakeFiles/slr_parser.dir/src/grammar.cpp.o" \
 "CMakeFiles/slr_parser.dir/src/lr0.cpp.o" \
 "CMakeFiles/slr_parser.dir/src/slr_table.cpp.o" \
-"CMakeFiles/slr_parser.dir/src/parser.cpp.o"
+"CMakeFiles/slr_parser.dir/src/parser.cpp.o" \
+"CMakeFiles/slr_parser.dir/lex_flex.cpp.o"
 
 # External object files for target slr_parser
 slr_parser_EXTERNAL_OBJECTS =
 
 slr_parser: CMakeFiles/slr_parser.dir/src/main.cpp.o
-slr_parser: CMakeFiles/slr_parser.dir/src/lexer.cpp.o
 slr_parser: CMakeFiles/slr_parser.dir/src/grammar.cpp.o
 slr_parser: CMakeFiles/slr_parser.dir/src/lr0.cpp.o
 slr_parser: CMakeFiles/slr_parser.dir/src/slr_table.cpp.o
 slr_parser: CMakeFiles/slr_parser.dir/src/parser.cpp.o
+slr_parser: CMakeFiles/slr_parser.dir/lex_flex.cpp.o
 slr_parser: CMakeFiles/slr_parser.dir/build.make
 slr_parser: CMakeFiles/slr_parser.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/petrzarkih/Desktop/slr_parser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable slr_parser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/petrzarkih/Desktop/slr_parser/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable slr_parser"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/slr_parser.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -187,7 +192,7 @@ CMakeFiles/slr_parser.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/slr_parser.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/slr_parser.dir/clean
 
-CMakeFiles/slr_parser.dir/depend:
+CMakeFiles/slr_parser.dir/depend: lex_flex.cpp
 	cd /Users/petrzarkih/Desktop/slr_parser/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/petrzarkih/Desktop/slr_parser /Users/petrzarkih/Desktop/slr_parser /Users/petrzarkih/Desktop/slr_parser/build /Users/petrzarkih/Desktop/slr_parser/build /Users/petrzarkih/Desktop/slr_parser/build/CMakeFiles/slr_parser.dir/DependInfo.cmake "--color=$(COLOR)" slr_parser
 .PHONY : CMakeFiles/slr_parser.dir/depend
 

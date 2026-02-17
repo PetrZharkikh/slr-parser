@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/petrzarkih/Desktop/slr_parser/build/lex_flex.cpp" "CMakeFiles/slr_parser.dir/lex_flex.cpp.o" "gcc" "CMakeFiles/slr_parser.dir/lex_flex.cpp.o.d"
   "/Users/petrzarkih/Desktop/slr_parser/src/grammar.cpp" "CMakeFiles/slr_parser.dir/src/grammar.cpp.o" "gcc" "CMakeFiles/slr_parser.dir/src/grammar.cpp.o.d"
-  "/Users/petrzarkih/Desktop/slr_parser/src/lexer.cpp" "CMakeFiles/slr_parser.dir/src/lexer.cpp.o" "gcc" "CMakeFiles/slr_parser.dir/src/lexer.cpp.o.d"
   "/Users/petrzarkih/Desktop/slr_parser/src/lr0.cpp" "CMakeFiles/slr_parser.dir/src/lr0.cpp.o" "gcc" "CMakeFiles/slr_parser.dir/src/lr0.cpp.o.d"
   "/Users/petrzarkih/Desktop/slr_parser/src/main.cpp" "CMakeFiles/slr_parser.dir/src/main.cpp.o" "gcc" "CMakeFiles/slr_parser.dir/src/main.cpp.o.d"
   "/Users/petrzarkih/Desktop/slr_parser/src/parser.cpp" "CMakeFiles/slr_parser.dir/src/parser.cpp.o" "gcc" "CMakeFiles/slr_parser.dir/src/parser.cpp.o.d"

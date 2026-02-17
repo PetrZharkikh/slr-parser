@@ -129,6 +129,30 @@ slr_parser/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/build
 .PHONY : slr_parser/fast
 
+lex_flex.o: lex_flex.cpp.o
+.PHONY : lex_flex.o
+
+# target to build an object file
+lex_flex.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/lex_flex.cpp.o
+.PHONY : lex_flex.cpp.o
+
+lex_flex.i: lex_flex.cpp.i
+.PHONY : lex_flex.i
+
+# target to preprocess a source file
+lex_flex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/lex_flex.cpp.i
+.PHONY : lex_flex.cpp.i
+
+lex_flex.s: lex_flex.cpp.s
+.PHONY : lex_flex.s
+
+# target to generate assembly for a file
+lex_flex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/lex_flex.cpp.s
+.PHONY : lex_flex.cpp.s
+
 src/grammar.o: src/grammar.cpp.o
 .PHONY : src/grammar.o
 
@@ -152,30 +176,6 @@ src/grammar.s: src/grammar.cpp.s
 src/grammar.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/grammar.cpp.s
 .PHONY : src/grammar.cpp.s
-
-src/lexer.o: src/lexer.cpp.o
-.PHONY : src/lexer.o
-
-# target to build an object file
-src/lexer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/lexer.cpp.o
-.PHONY : src/lexer.cpp.o
-
-src/lexer.i: src/lexer.cpp.i
-.PHONY : src/lexer.i
-
-# target to preprocess a source file
-src/lexer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/lexer.cpp.i
-.PHONY : src/lexer.cpp.i
-
-src/lexer.s: src/lexer.cpp.s
-.PHONY : src/lexer.s
-
-# target to generate assembly for a file
-src/lexer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/lexer.cpp.s
-.PHONY : src/lexer.cpp.s
 
 src/lr0.o: src/lr0.cpp.o
 .PHONY : src/lr0.o
@@ -282,12 +282,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... slr_parser"
+	@echo "... lex_flex.o"
+	@echo "... lex_flex.i"
+	@echo "... lex_flex.s"
 	@echo "... src/grammar.o"
 	@echo "... src/grammar.i"
 	@echo "... src/grammar.s"
-	@echo "... src/lexer.o"
-	@echo "... src/lexer.i"
-	@echo "... src/lexer.s"
 	@echo "... src/lr0.o"
 	@echo "... src/lr0.i"
 	@echo "... src/lr0.s"

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/slr_parser.dir/lex_flex.cpp.o"
+  "CMakeFiles/slr_parser.dir/lex_flex.cpp.o.d"
   "CMakeFiles/slr_parser.dir/src/grammar.cpp.o"
   "CMakeFiles/slr_parser.dir/src/grammar.cpp.o.d"
-  "CMakeFiles/slr_parser.dir/src/lexer.cpp.o"
-  "CMakeFiles/slr_parser.dir/src/lexer.cpp.o.d"
   "CMakeFiles/slr_parser.dir/src/lr0.cpp.o"
   "CMakeFiles/slr_parser.dir/src/lr0.cpp.o.d"
   "CMakeFiles/slr_parser.dir/src/main.cpp.o"
@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/slr_parser.dir/src/parser.cpp.o.d"
   "CMakeFiles/slr_parser.dir/src/slr_table.cpp.o"
   "CMakeFiles/slr_parser.dir/src/slr_table.cpp.o.d"
+  "lex_flex.cpp"
   "slr_parser"
   "slr_parser.pdb"
 )

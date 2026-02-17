@@ -10,3 +10,8 @@ bool parse_and_trace(
     const SLRTable& tab,
     const std::vector<Token>& tokens
 );
+
+struct StackEntry {
+    std::string sym;
+    int state;
+};
