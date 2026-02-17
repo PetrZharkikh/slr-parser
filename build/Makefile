@@ -225,6 +225,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/parser.o: src/parser.cpp.o
+.PHONY : src/parser.o
+
+# target to build an object file
+src/parser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/parser.cpp.o
+.PHONY : src/parser.cpp.o
+
+src/parser.i: src/parser.cpp.i
+.PHONY : src/parser.i
+
+# target to preprocess a source file
+src/parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/parser.cpp.i
+.PHONY : src/parser.cpp.i
+
+src/parser.s: src/parser.cpp.s
+.PHONY : src/parser.s
+
+# target to generate assembly for a file
+src/parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/parser.cpp.s
+.PHONY : src/parser.cpp.s
+
+src/slr_table.o: src/slr_table.cpp.o
+.PHONY : src/slr_table.o
+
+# target to build an object file
+src/slr_table.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/slr_table.cpp.o
+.PHONY : src/slr_table.cpp.o
+
+src/slr_table.i: src/slr_table.cpp.i
+.PHONY : src/slr_table.i
+
+# target to preprocess a source file
+src/slr_table.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/slr_table.cpp.i
+.PHONY : src/slr_table.cpp.i
+
+src/slr_table.s: src/slr_table.cpp.s
+.PHONY : src/slr_table.s
+
+# target to generate assembly for a file
+src/slr_table.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/slr_table.cpp.s
+.PHONY : src/slr_table.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,6 +294,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/parser.o"
+	@echo "... src/parser.i"
+	@echo "... src/parser.s"
+	@echo "... src/slr_table.o"
+	@echo "... src/slr_table.i"
+	@echo "... src/slr_table.s"
 .PHONY : help
 
 

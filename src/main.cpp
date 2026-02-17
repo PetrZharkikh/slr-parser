@@ -1,6 +1,11 @@
 #include <iostream>
+#include <unordered_map>
+#include <unordered_set>
 #include "grammar.hpp"
 #include "lr0.hpp"
+#include "parser.hpp"
+#include "lexer.hpp"
+#include "slr_table.hpp"
 
 //follow
 std::unordered_map<std::string, std::unordered_set<std::string>> follow = {
@@ -9,33 +14,16 @@ std::unordered_map<std::string, std::unordered_set<std::string>> follow = {
     {"F", {"*", "/", "+", "-", ")", "$"}}
 };
 
-static void print_itemset(const Grammar& g, const ItemSet& I) {
-    for (const auto& it : I) {
-        const auto& p = g.prods[it.prod];
-        std::cout << p.lhs << " -> ";
-        for (int i = 0; i < (int)p.rhs.size(); ++i) {
-            if (i == it.point) std::cout << "• ";
-            std::cout << p.rhs[i] << " ";
-        }
-        if (it.point == (int)p.rhs.size()) std::cout << "•";
-        std::cout << "\n";
-    }
-}
-
 int main() {
     Grammar g = make_expr_grammar();
-    LR0DFA dfa = build_lr0_dfa(g);
+    auto dfa = build_lr0_dfa(g);
 
-    for (int i = 0; i < (int)dfa.states.size(); ++i) {
-        std::cout << "\n=== I" << i << " ===\n";
-        print_itemset(g, dfa.states[i]);
-    }
+    auto tab = build_slr_table(g, dfa, follow);
 
-    std::cout << "\n=== transitions ===\n";
-    for (const auto& [key, to] : dfa.trans) {
-        std::cout << "I" << key.first << " -- " << key.second
-                  << " --> I" << to << "\n";
-    }
+    std::string s;
+    std::getline(std::cin, s);
+    auto tokens = lex_all(s);
 
-    return 0;
+    bool ok = parse_and_trace(g, tab, tokens);
+    return ok ? 0 : 1;
 }

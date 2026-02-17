@@ -12,6 +12,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/petrzarkih/Desktop/slr_parser/src/lexer.cpp" "CMakeFiles/slr_parser.dir/src/lexer.cpp.o" "gcc" "CMakeFiles/slr_parser.dir/src/lexer.cpp.o.d"
   "/Users/petrzarkih/Desktop/slr_parser/src/lr0.cpp" "CMakeFiles/slr_parser.dir/src/lr0.cpp.o" "gcc" "CMakeFiles/slr_parser.dir/src/lr0.cpp.o.d"
   "/Users/petrzarkih/Desktop/slr_parser/src/main.cpp" "CMakeFiles/slr_parser.dir/src/main.cpp.o" "gcc" "CMakeFiles/slr_parser.dir/src/main.cpp.o.d"
+  "/Users/petrzarkih/Desktop/slr_parser/src/parser.cpp" "CMakeFiles/slr_parser.dir/src/parser.cpp.o" "gcc" "CMakeFiles/slr_parser.dir/src/parser.cpp.o.d"
+  "/Users/petrzarkih/Desktop/slr_parser/src/slr_table.cpp" "CMakeFiles/slr_parser.dir/src/slr_table.cpp.o" "gcc" "CMakeFiles/slr_parser.dir/src/slr_table.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
