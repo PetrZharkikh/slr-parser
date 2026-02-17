@@ -52,42 +52,46 @@ bool parse_and_trace(
         int s = st.back();
         std::string a = tok_to_term(tokens[pos]);
 
-        Action act;
+        Action act{ActionType::Error, -1};
         auto it = tab.action.find({s, a});
         if (it != tab.action.end()) act = it->second;
 
         std::cout << stack_to_string(st) << "\t" << input_to_string(tokens, pos) << "\t";
 
-        if (act.type == ActionType::Shift) {
-            std::cout << "shift" << act.value << "\n";
+        switch (act.type) {
+        case ActionType::Shift: {
+            std::cout << "shift " << act.value << "\n";
             st.push_back(act.value);
             ++pos;
-            continue;
+            break;
         }
-
-        if (act.type == ActionType::Reduce) {
+        case ActionType::Reduce: {
             const auto& p = g.prods[act.value];
             std::cout << "reduce " << prod_to_string(p) << "\n";
 
-            for (int k = 0; k < (int)p.rhs.size(); ++k) {
-                if (st.empty()) return false;
-                st.pop_back();
-            }
+            for (int k = 0; k < (int)p.rhs.size(); ++k) st.pop_back();
 
             int s2 = st.back();
             auto git = tab.go_to.find({s2, p.lhs});
-            if (git == tab.go_to.end()) return false;
-
+            if (git == tab.go_to.end()) {
+                std::cout << "error (no goto)\n";
+                return false;
+            }
             st.push_back(git->second);
-            continue;
+            break;
         }
-
-        if (act.type == ActionType::Accept) {
+        case ActionType::Accept: {
+            if (a != "$") {
+                std::cout << "error (accept on non-$)\n";
+                return false;
+            }
             std::cout << "accept\n";
             return true;
         }
-
-        std::cout << "accept\n";
-        return false;
+        case ActionType::Error:
+        default:
+            std::cout << "error\n";
+            return false;
+        }
     }
 }

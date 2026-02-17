@@ -42,7 +42,7 @@ SLRTable build_slr_table(
             const auto& p = g.prods[it.prod];
             if (it.point != (int)p.rhs.size()) continue;
 
-            if (p.lhs == g.augumented_start) {
+            if (it.prod == 0) {
                 put_action(tab.action, i, "$", Action{ActionType::Accept, 0});
             } else {
                 auto f = follow.find(p.lhs);
