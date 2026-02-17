@@ -129,12 +129,26 @@ slr_parser/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/build
 .PHONY : slr_parser/fast
 
+#=============================================================================
+# Target rules for targets named slr_tests
+
+# Build rule for target.
+slr_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 slr_tests
+.PHONY : slr_tests
+
+# fast build rule for target.
+slr_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/build
+.PHONY : slr_tests/fast
+
 lex_flex.o: lex_flex.cpp.o
 .PHONY : lex_flex.o
 
 # target to build an object file
 lex_flex.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/lex_flex.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/lex_flex.cpp.o
 .PHONY : lex_flex.cpp.o
 
 lex_flex.i: lex_flex.cpp.i
@@ -143,6 +157,7 @@ lex_flex.i: lex_flex.cpp.i
 # target to preprocess a source file
 lex_flex.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/lex_flex.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/lex_flex.cpp.i
 .PHONY : lex_flex.cpp.i
 
 lex_flex.s: lex_flex.cpp.s
@@ -151,6 +166,7 @@ lex_flex.s: lex_flex.cpp.s
 # target to generate assembly for a file
 lex_flex.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/lex_flex.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/lex_flex.cpp.s
 .PHONY : lex_flex.cpp.s
 
 src/grammar.o: src/grammar.cpp.o
@@ -159,6 +175,7 @@ src/grammar.o: src/grammar.cpp.o
 # target to build an object file
 src/grammar.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/grammar.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/src/grammar.cpp.o
 .PHONY : src/grammar.cpp.o
 
 src/grammar.i: src/grammar.cpp.i
@@ -167,6 +184,7 @@ src/grammar.i: src/grammar.cpp.i
 # target to preprocess a source file
 src/grammar.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/grammar.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/src/grammar.cpp.i
 .PHONY : src/grammar.cpp.i
 
 src/grammar.s: src/grammar.cpp.s
@@ -175,6 +193,7 @@ src/grammar.s: src/grammar.cpp.s
 # target to generate assembly for a file
 src/grammar.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/grammar.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/src/grammar.cpp.s
 .PHONY : src/grammar.cpp.s
 
 src/lr0.o: src/lr0.cpp.o
@@ -183,6 +202,7 @@ src/lr0.o: src/lr0.cpp.o
 # target to build an object file
 src/lr0.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/lr0.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/src/lr0.cpp.o
 .PHONY : src/lr0.cpp.o
 
 src/lr0.i: src/lr0.cpp.i
@@ -191,6 +211,7 @@ src/lr0.i: src/lr0.cpp.i
 # target to preprocess a source file
 src/lr0.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/lr0.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/src/lr0.cpp.i
 .PHONY : src/lr0.cpp.i
 
 src/lr0.s: src/lr0.cpp.s
@@ -199,6 +220,7 @@ src/lr0.s: src/lr0.cpp.s
 # target to generate assembly for a file
 src/lr0.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/lr0.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/src/lr0.cpp.s
 .PHONY : src/lr0.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -231,6 +253,7 @@ src/parser.o: src/parser.cpp.o
 # target to build an object file
 src/parser.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/parser.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/src/parser.cpp.o
 .PHONY : src/parser.cpp.o
 
 src/parser.i: src/parser.cpp.i
@@ -239,6 +262,7 @@ src/parser.i: src/parser.cpp.i
 # target to preprocess a source file
 src/parser.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/parser.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/src/parser.cpp.i
 .PHONY : src/parser.cpp.i
 
 src/parser.s: src/parser.cpp.s
@@ -247,6 +271,7 @@ src/parser.s: src/parser.cpp.s
 # target to generate assembly for a file
 src/parser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/parser.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/src/parser.cpp.s
 .PHONY : src/parser.cpp.s
 
 src/slr_table.o: src/slr_table.cpp.o
@@ -255,6 +280,7 @@ src/slr_table.o: src/slr_table.cpp.o
 # target to build an object file
 src/slr_table.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/slr_table.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/src/slr_table.cpp.o
 .PHONY : src/slr_table.cpp.o
 
 src/slr_table.i: src/slr_table.cpp.i
@@ -263,6 +289,7 @@ src/slr_table.i: src/slr_table.cpp.i
 # target to preprocess a source file
 src/slr_table.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/slr_table.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/src/slr_table.cpp.i
 .PHONY : src/slr_table.cpp.i
 
 src/slr_table.s: src/slr_table.cpp.s
@@ -271,7 +298,32 @@ src/slr_table.s: src/slr_table.cpp.s
 # target to generate assembly for a file
 src/slr_table.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_parser.dir/build.make CMakeFiles/slr_parser.dir/src/slr_table.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/src/slr_table.cpp.s
 .PHONY : src/slr_table.cpp.s
+
+tests/tests.o: tests/tests.cpp.o
+.PHONY : tests/tests.o
+
+# target to build an object file
+tests/tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/tests/tests.cpp.o
+.PHONY : tests/tests.cpp.o
+
+tests/tests.i: tests/tests.cpp.i
+.PHONY : tests/tests.i
+
+# target to preprocess a source file
+tests/tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/tests/tests.cpp.i
+.PHONY : tests/tests.cpp.i
+
+tests/tests.s: tests/tests.cpp.s
+.PHONY : tests/tests.s
+
+# target to generate assembly for a file
+tests/tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slr_tests.dir/build.make CMakeFiles/slr_tests.dir/tests/tests.cpp.s
+.PHONY : tests/tests.cpp.s
 
 # Help Target
 help:
@@ -282,6 +334,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... slr_parser"
+	@echo "... slr_tests"
 	@echo "... lex_flex.o"
 	@echo "... lex_flex.i"
 	@echo "... lex_flex.s"
@@ -300,6 +353,9 @@ help:
 	@echo "... src/slr_table.o"
 	@echo "... src/slr_table.i"
 	@echo "... src/slr_table.s"
+	@echo "... tests/tests.o"
+	@echo "... tests/tests.i"
+	@echo "... tests/tests.s"
 .PHONY : help
 
 

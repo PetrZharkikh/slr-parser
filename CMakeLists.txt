@@ -22,7 +22,23 @@ add_executable(slr_parser
     ${FLEX_Lexer_OUTPUTS}
 )
 
+add_executable(slr_tests
+    tests/tests.cpp
+    src/grammar.cpp
+    src/lr0.cpp
+    src/slr_table.cpp
+    src/parser.cpp
+    ${FLEX_Lexer_OUTPUTS}
+)
+
 target_include_directories(slr_parser PRIVATE
     include
     ${CMAKE_BINARY_DIR}
 )
+
+target_include_directories(slr_tests PRIVATE
+    include
+    ${CMAKE_BINARY_DIR}
+)
+
+add_test(NAME slr_tests COMMAND slr_tests)
