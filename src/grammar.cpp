@@ -3,7 +3,7 @@
 Grammar make_expr_grammar() {
     Grammar g;
     g.start = "E";
-    g.augumented_start = "S";
+    g.augumented_start = "S'";
 
     g.prods.push_back({"S'", {"E"}});
 
@@ -16,8 +16,8 @@ Grammar make_expr_grammar() {
     g.prods.push_back({"T", {"F"}});
 
     g.prods.push_back({"F", {"(", "E", ")"}});
-    g.prods.push_back({"T", {"id"}});
-    g.prods.push_back({"T", {"num"}});
+    g.prods.push_back({"F", {"id"}});
+    g.prods.push_back({"F", {"num"}});
 
     g.terminals = {"+", "-", "*", "/", "(", ")", "id", "num", "$"};
     g.nonterminals = {"E", "S'", "F", "T"};
