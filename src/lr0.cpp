@@ -1,6 +1,8 @@
 #include "lr0.hpp"
 #include <queue>
 
+//computes closure(I) for LR(0) items
+//adds items for non-terminals that appear after the dot
 ItemSet closure(const Grammar& g, const ItemSet& I) {
     ItemSet result = I;
     bool changed = true;
@@ -31,6 +33,7 @@ ItemSet closure(const Grammar& g, const ItemSet& I) {
     return result;
 }
 
+//GOTO(I, X): move dot over symbol X and take closure
 ItemSet go_to(const Grammar& g, const ItemSet& I, const std::string& X) {
     ItemSet moved;
 

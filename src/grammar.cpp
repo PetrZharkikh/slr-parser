@@ -1,5 +1,8 @@
 #include "grammar.hpp"
 
+//builds grammar for arithmetic expressions
+//used both in main program and in tests
+
 Grammar make_expr_grammar() {
     Grammar g;
     g.start = "E";

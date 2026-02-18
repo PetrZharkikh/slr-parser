@@ -37,6 +37,8 @@ static std::string prod_to_string(const Production& p) {
     return oss.str();
 }
 
+//runs SLR parsing algorithm and prints parsing trace
+//returns true if input is accepted, false otherwise
 bool parse_and_trace(
     const Grammar& g,
     const SLRTable& tab,
@@ -55,6 +57,9 @@ bool parse_and_trace(
               << std::setw(W_INPUT) << "INPUT"
               << "ACTION\n";
 
+    //main SLR parsing loop:
+    //stack contains symbols and states
+    //input is processed token by token
     while (true) {
         int s = st.back().state;
         std::string a = tok_to_term(tokens[pos]);
@@ -69,14 +74,14 @@ bool parse_and_trace(
 
         switch (act.type) {
 
-        case ActionType::Shift: {
+        case ActionType::Shift: {                       //shift: push current input symbol and next state to stack
             std::cout << "shift " << act.value << "\n";
             st.push_back({a, act.value});
             ++pos;
             break;
         }
 
-        case ActionType::Reduce: {
+        case ActionType::Reduce: {                      //reduce: pop |rhs| symbols from stack and push lhs with GOTO state
             const auto& p = g.prods[act.value];
             std::cout << "reduce " << prod_to_string(p) << "\n";
 
@@ -93,7 +98,7 @@ bool parse_and_trace(
             break;
         }
 
-        case ActionType::Accept: {
+        case ActionType::Accept: {                      //accept: input successfully parsed
             if (a != "$") {
                 std::cout << "error (accept on non-$)\n";
                 return false;

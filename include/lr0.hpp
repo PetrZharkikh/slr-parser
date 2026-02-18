@@ -6,9 +6,10 @@
 #include <map>
 #include <utility>
 
+//production with a dot position
 struct Item {
-    int prod;   //индекс правила в Grammar::prods
-    int point;  //индекс точки
+    int prod;   //index of rule in Grammar::prods
+    int point;  //index of dot in production
 
     bool operator<(const Item& other) const {
         if (prod != other.prod) return prod < other.prod;
@@ -23,8 +24,8 @@ struct Item {
 using ItemSet = std::set<Item>;
 
 struct LR0DFA {
-    std::vector<ItemSet> states;
-    std::map<std::pair<int, std::string>, int> trans;
+    std::vector<ItemSet> states;                        //DFA states
+    std::map<std::pair<int, std::string>, int> trans;   //DFA transitions
 };
 
 ItemSet closure(const Grammar& g, const ItemSet& I);

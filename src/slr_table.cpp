@@ -14,6 +14,8 @@ static void put_action(ActionTable& t, int st, const std::string& a, Action act)
     t.emplace(key, act);
 }
 
+//builds SLR parsing table (ACTION and GOTO)
+//uses FOLLOW sets to resolve reduce actions
 SLRTable build_slr_table(
     const Grammar& g,
     const LR0DFA& dfa,
